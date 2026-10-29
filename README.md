@@ -1,41 +1,50 @@
 ﻿# 🦯 Akıllı Baston Mobil Uygulaması
+> **Görme Engelli Bireyler İçin Erişilebilir Mobil Asistan ve Güvenlik Sistemi**
 
-Bu proje, görme engelli bireyler için geliştirdiğimiz akıllı bastona eşlik eden yardımcı mobil uygulamadır. İki kişilik bir ekip çalışması (öğrenci projesi) olarak hayata geçirilmiştir.
-
----
-
-## 🎯 Projenin Amacı
-Baston donanımına destek olarak; görme engelli kullanıcının sesli komutlarla telefonunu yönetebilmesini, bastonla Bluetooth üzerinden bağlantı kurabilmesini ve acil durumlarda yakınlarına hızlıca konum gönderebilmesini sağlamaktır.
+Bu proje, görme engelli bireylerin günlük yaşamda daha güvenli ve bağımsız hareket edebilmelerini sağlamak amacıyla geliştirilen akıllı baston projesinin mobil ayağını oluşturmaktadır. İki kişilik bir ekip çalışması kapsamında hayata geçirilmiş olup; akıllı baston donanımı ile mobil cihaz arasında köprü kurarak kullanıcıya sesli rehberlik, navigasyon ve güvenlik desteği sunar.
 
 ---
 
-## 📱 Uygulamanın Özellikleri
-* **Bluetooth ile Baston Bağlantısı:** Baston üzerindeki modüle bağlanarak cihazla iletişim kurar.
-* **Sesli Komut ve Sesli Yanıt:** Görme engellilerin rahat kullanabilmesi için ses tanıma ve sesli geri bildirim (okuma) özellikleri içerir.
-* **Acil Durum SMS ve Konum:** İhtiyaç anında önceden kaydedilen acil durum numarasına telefonun GPS konumunu SMS olarak gönderir.
-* **Erişilebilir Ekran:** Görme yetisi kısıtlı kullanıcılar için sade, siyah temalı ve dokunmatik geri bildirimli arayüz.
-* **Ayarlar Ekranı:** Acil durum numaralarını ve kullanıcı bilgilerini kaydetme alanı.
+## 🌟 Öne Çıkan Özellikler
+
+* 🎙️ **Sesli Asistan & Ses Tanıma:** Görme engelli kullanıcıların ekrana ihtiyaç duymadan cihazı yönetebilmesi için ses tanıma (*Speech-to-Text*) ve metin seslendirme (*Text-to-Speech*) altyapısı.
+* 📡 **Bluetooth Donanım Entegrasyonu:** Akıllı baston üzerindeki modülle kablosuz iletişim kurarak anlık durum takibi ve veri senkronizasyonu sağlayan Bluetooth bağlantısı.
+* 🚨 **Acil Durum & GPS Konum Bildirimi:** Tehlike anında tek bir komutla kullanıcının anlık coğrafi konumunu önceden belirlenen acil durum kişilerine SMS ile otomatik ileten güvenlik sistemi.
+* 👁️ **Erişilebilir Kullanıcı Deneyimi:** Az gören veya görme engelli kullanıcılar için özel olarak optimize edilmiş yüksek kontrastlı, sade ve dokunmatik geri bildirimli arayüz mimarisi.
+* ⚙️ **Kişiselleştirilmiş Ayarlar:** Acil durum numaralarını ve kullanıcı tercihlerini cihaz hafızasında güvenle saklayan yönetim modülü.
 
 ---
 
-## 🛠️ Kullanılan Teknolojiler
-* **Geliştirme:** Flutter & Dart
-* **Hazır Paketler (Kütüphaneler):**
-  * `speech_to_text` (Ses Tanıma)
-  * `flutter_tts` (Sesli Okuma)
-  * `geolocator` (GPS Konum)
-  * `telephony` (SMS Gönderme)
-  * `flutter_bluetooth_serial` (Bluetooth İletişimi)
-  * `shared_preferences` (Numaraları Hafızada Tutma)
+## 🛠️ Kullanılan Teknolojiler ve Kütüphaneler
+
+* **Geliştirme Platformu:** Flutter & Dart
+* **Ses & Asistan Altyapısı:** `speech_to_text`, `flutter_tts`, `audio_session`
+* **Donanım İletişimi:** `flutter_bluetooth_serial`, `flutter_blue_plus`
+* **Konum & Harita:** `geolocator`, `geocoding`
+* **Güvenlik & SMS:** `telephony`, `permission_handler`
+* **Yerel Depolama:** `shared_preferences`
 
 ---
 
-## 🚀 Çalıştırma
-Flutter yüklü bir bilgisayarda:
+## 🚀 Kurulum ve Çalıştırma
+
+Projeyi yerel ortamınızda çalıştırmak için:
+
 ```bash
+# 1. Depoyu klonlayın
 git clone https://github.com/nisanurportakal/Ak-ll-_Baston_App.git
+
+# 2. Proje dizinine gidin
 cd Ak-ll-_Baston_App
+
+# 3. Bağımlılıkları yükleyin
 flutter pub get
+
+# 4. Uygulamayı başlatın
 flutter run
 ```
-*Hazır çalışan kurulum dosyasını doğrudan telefonunuza yüklemek için [Releases](../../releases) sayfasından `.apk` dosyasını indirebilirsiniz.*
+
+---
+
+## 📱 Hazır Kurulum Dosyası (APK)
+Uygulamayı derleme yapmadan doğrudan Android cihazınızda test etmek için [Releases](../../releases) sayfasından güncel `.apk` kurulum dosyasını indirebilirsiniz.
